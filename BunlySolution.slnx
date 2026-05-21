@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BunlyWebApi/BunlyWebApi.csproj" />
+  <Project Path="WebApplication3/BunlyWebUI.csproj" Id="47dbf7ca-c09d-4962-a8df-21d3e1351f20" />
+</Solution>
