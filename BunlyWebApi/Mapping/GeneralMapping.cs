@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BunlyWebApi.Dtos.AboutDtos;
+using BunlyWebApi.Dtos.CategoryDtos;
 using BunlyWebApi.Dtos.FeatureDtos;
 using BunlyWebApi.Dtos.MessageDtos;
 using BunlyWebApi.Dtos.NotificationDtos;
@@ -31,6 +33,14 @@ namespace BunlyWebApi.Mapping
             CreateMap<Notification, UpdateNotificationDto>().ReverseMap();
             CreateMap<Notification, GetNotificationByIdDto>().ReverseMap();
             CreateMap<Notification, ResultNotificationDto>().ReverseMap();
+
+
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, GetAboutByIdDto>().ReverseMap();
 
 
 

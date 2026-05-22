@@ -1,4 +1,6 @@
-﻿using BunlyWebApi.Context;
+﻿using AutoMapper;
+using BunlyWebApi.Context;
+using BunlyWebApi.Dtos.CategoryDtos;
 using BunlyWebApi.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,17 +12,22 @@ namespace BunlyWebApi.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ApiContext _context;
-        public CategoriesController(ApiContext context)
+        private readonly IMapper _mapper;
+        public CategoriesController(ApiContext context, IMapper mapper )
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public IActionResult CreateCategory(Category category)
+        public IActionResult CreateCategory(CreateCategoryDto createCategoryDto)
         {
-            _context.Categories.Add(category);
+            var value = _mapper.Map<Category>(createCategoryDto);
+
+            _context.Categories.Add(value);
             _context.SaveChanges();
-            return Ok("Kategori ekleme işlemi gerçekleşti");
+
+            return Ok("Kategori başarıyla eklendi.");
         }
 
         [HttpDelete]

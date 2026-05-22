@@ -1,0 +1,68 @@
+﻿@model List<ResultWhyChooseBunlyDto>
+
+@{
+    ViewData["Title"] = "WhyChooseBunlyList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Neden Bunly Alanı Listesi</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-0">Sayfa düzenini bozmamak için 3'ten fazla kart eklemeyin. </p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">Açıklama</th>
+                                    <th scope="col">Resim Yolu</th>
+                                    <th scope="col">Sil</th>
+                                    <th scope="col">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.IconUrl</td>
+                                        <td><a href="/WhyChooseBunly/DeleteWhyChooseBunly/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/WhyChooseBunly/UpdateWhyChooseBunly/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+                                     
+                                    </tr>
+                                }
+                                @* Mutlu Misafirrrrrrrrrr	Bunly olarak misafirlerimize kaliteli hizmet, lezzetli yemekler ve keyifli bir ortam sunuyoruz.	bi bi-emoji-smile *@
+                            </tbody>
+                        </table>
+                        @if (count < 3)
+                        {
+                            <td><a class="btn btn-success" href="/WhyChooseBunly/CreateWhyChooseBunly">Yeni Kart Ekleme</a></td>
+                        }
+                        else
+                        {
+                            <td><a class="btn btn-primary" href="#">Maksimum sayıda kart eklendi.</a></td>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
