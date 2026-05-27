@@ -23,20 +23,20 @@ namespace BunlyWebApi.Controllers
             return Ok("Kategori ekleme işlemi gerçekleşti");
         }
 
-        [HttpDelete]
-        public IActionResult DeleteBunlyEvent(int id)
-        {
-
-            var cat = _context.BunlyEvents.Find(id);
-            if (cat == null)
+            [HttpDelete]
+            public IActionResult DeleteBunlyEvent(int id)
             {
-                return NotFound("Kategori bulunamadı");
-            }
-            _context.BunlyEvents.Remove(cat);
-            _context.SaveChanges();
 
-            return Ok("Silme işlemi başarılı");
-        }
+                var cat = _context.BunlyEvents.Find(id);
+                if (cat == null)
+                {
+                    return NotFound("Kategori bulunamadı");
+                }
+                _context.BunlyEvents.Remove(cat);
+                _context.SaveChanges();
+
+                return Ok("Silme işlemi başarılı");
+            }
 
         [HttpGet]
         public IActionResult BunlyEventList()

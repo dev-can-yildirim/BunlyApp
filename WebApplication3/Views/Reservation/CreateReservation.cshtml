@@ -1,0 +1,46 @@
+﻿@model CreateReservationDto
+
+@{
+    ViewData["Title"] = "CreateReservation";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Kategori Ekleme Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Müşteri Adı</label>
+                            <input type="text" asp-for="NameSurname" class="form-control" />
+                            <br />
+                            <label>Rezervasyon Tarihi</label>
+                            <input type="text" asp-for="Date" class="form-control" />
+                            <br />
+                            <label>Rezervasyon Saati</label>
+                            <input type="text" asp-for="ReservationTime" class="form-control" />
+                            <br />
+                            <label>Kişi Sayısı</label>
+                            <input type="text" asp-for="CountOfPeople" class="form-control" />
+                            <br />
+                            <label>Rezervasyon Durumu</label>
+                            <input type="text" asp-for="ReservationStatus" class="form-control" />
+                            <br />
+                            <button class="btn btn-primary">Kategori Oluştur</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+

@@ -2,9 +2,11 @@
 using BunlyWebApi.Dtos.AboutDtos;
 using BunlyWebApi.Dtos.CategoryDtos;
 using BunlyWebApi.Dtos.FeatureDtos;
+using BunlyWebApi.Dtos.ImageDtos;
 using BunlyWebApi.Dtos.MessageDtos;
 using BunlyWebApi.Dtos.NotificationDtos;
 using BunlyWebApi.Dtos.ProductDtos;
+using BunlyWebApi.Dtos.RezervationDtos;
 using BunlyWebApi.Entities;
 
 namespace BunlyWebApi.Mapping
@@ -41,6 +43,19 @@ namespace BunlyWebApi.Mapping
             CreateMap<About, UpdateAboutDto>().ReverseMap();
             CreateMap<About, ResultAboutDto>().ReverseMap();
             CreateMap<About, GetAboutByIdDto>().ReverseMap();
+
+
+            CreateMap<Reservation, CreateReservationDto>().ReverseMap();
+            CreateMap<Reservation, UpdateReservationDto>().ReverseMap();
+            CreateMap<Reservation, GetReservationByIdDto>().ReverseMap();
+            CreateMap<Reservation, ResultReservationDto>().ReverseMap();
+
+
+            CreateMap<Image, ResultImageDto>().ReverseMap();
+            CreateMap<Image, UpdateImageDto>().ReverseMap();
+            CreateMap<Image, GetImageByIdDto>().ReverseMap();
+            CreateMap<Image, CreateImageDto>().ReverseMap();
+
 
 
 

@@ -1,0 +1,48 @@
+﻿@model GetContactByIdDto
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>İletişim Alanı Güncelleme Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <input type="hidden" asp-for="ContactId" />
+                            <label>Adres</label>
+                            <input type="text" asp-for="Address" class="form-control" />
+                            <br />
+                            <label>Mail Adresi</label>
+                            <input type="email" asp-for="Email" class="form-control" />
+                            <br />
+                            <label>Konum</label>
+                            <input type="text" asp-for="MapLocation" class="form-control" />
+                            <br />
+                            <label>Açık Saatler</label>
+                            <input type="text" asp-for="OpenHours" class="form-control" />
+                            <br />
+                            <label>Telefon Numarası</label>
+                            <input type="tel" asp-for="PhoneNumber" class="form-control" />
+                            <br />
+                            <button class="btn btn-primary">İletişim Alanı Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+

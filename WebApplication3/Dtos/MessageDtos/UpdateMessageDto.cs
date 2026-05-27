@@ -1,9 +1,9 @@
-﻿namespace BunlyWebApi.Entities
+﻿namespace BunlyWebUI.Dtos.MessageDtos
 {
-    public class Message
+    public class UpdateMessageDto
     {
         public int MessageId { get; set; }
-        public string NameSurname    { get; set; }
+        public string NameSurname { get; set; }
         public string Subject { get; set; }
         public string Email { get; set; }
         public string MessageDetails { get; set; }

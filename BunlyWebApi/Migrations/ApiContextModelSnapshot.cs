@@ -56,7 +56,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("AboutId");
 
-                    b.ToTable("Abouts");
+                    b.ToTable("Abouts", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.BunlyEvent", b =>
@@ -87,7 +87,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("BunlyEventId");
 
-                    b.ToTable("BunlyEvents");
+                    b.ToTable("BunlyEvents", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Category", b =>
@@ -104,7 +104,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Chef", b =>
@@ -133,7 +133,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("ChefId");
 
-                    b.ToTable("Chefs");
+                    b.ToTable("Chefs", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Contact", b =>
@@ -166,7 +166,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("ContactId");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Feature", b =>
@@ -199,7 +199,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("FeatureId");
 
-                    b.ToTable("Features");
+                    b.ToTable("Features", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Image", b =>
@@ -220,7 +220,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("ImageId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Message", b =>
@@ -255,7 +255,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("MessageId");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Notification", b =>
@@ -282,7 +282,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("NotificationId");
 
-                    b.ToTable("Notifications");
+                    b.ToTable("Notifications", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Product", b =>
@@ -315,7 +315,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Reservation", b =>
@@ -358,7 +358,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("ReservationId");
 
-                    b.ToTable("Reservations");
+                    b.ToTable("Reservations", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Service", b =>
@@ -383,7 +383,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("ServiceId");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Testimonial", b =>
@@ -412,7 +412,7 @@ namespace BunlyWebApi.Migrations
 
                     b.HasKey("TestimonialId");
 
-                    b.ToTable("Testimonials");
+                    b.ToTable("Testimonials", (string)null);
                 });
 
             modelBuilder.Entity("BunlyWebApi.Entities.Product", b =>
